@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>LYMP.WEBWORK</title>
+</head>
+<body>
+  <section class="overlay">
+  <h1>Welcome to our Web</h1>
+  <h2>Creat an account/Login</h2>
+  </section>
+  <form action="./Ppp.html" method="post">
+    <section class="details">
+      <h3>Details</h3>
+      <label for="e-mail">Your Email address</label>
+      <br>
+      <input id="e-mail" type="test" name="email" placeholder="Example001@email.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z] {2,}$"required>
+      <br>
+      <label for="name">Your Full Name</label>
+      <br>
+      <input id="name" type="text" placeholder="Okeke Paul">
+      <br>
+      <label for="phone number">Phone Number</label>
+      <br>
+      <input id="phone number" type="number" name="phone number"required>
+      <br>
+      <label for="username">User Name</label>
+      <br>
+      <input id="username" type="text" name="nickname" placeholder="@lympec"required>
+      <br>
+      <label for="state">STATE</label>
+      <br>
+      <input id="state" list="states" type="text" value="Nigeria">
+      <datalist id="states">
+        <option value="Nigeria"></option>
+        <option value="America"></option>
+        <option value="Ghana"></option>
+        <option value="UK"></option>
+      </datalist>
+    </section><br><br>
+    <section class="submit">
+      <input id="submit" type="submit"value="DONE" action="./file:///storage/emulated/0/LYMPEC.html">
+    </section>
+  </form>
+  <style> // Get the form button
+const doneButton = document.querySelector('button'); // or however you select your DONE button
+
+doneButton.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    
+    // Get form values
+    const email = document.querySelector('input[type="email"]').value;
+    const fullName = document.querySelector('input[placeholder*="Full Name"]').value;
+    const phone = document.querySelector('input[placeholder*="Phone"]').value;
+    const username = document.querySelector('input[placeholder*="User"]').value;
+    const state = document.querySelector('input[placeholder*="STATE"]').value;
+    
+    // Basic validation
+    if (!email || !fullName || !phone || !username || !state) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    // Store user data (optional)
+    localStorage.setItem('userData', JSON.stringify({
+        email: email,
+        fullName: fullName,
+        phone: phone,
+        username: username,
+        state: state
+    }));
+    
+    // Redirect to your main website
+    window.location.href = "file:///storage/emulated/0/LYMPEC.html"
+}); </style>
+</body>
+</html>
