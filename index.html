@@ -29,12 +29,12 @@
   <h1>Welcome to our Web</h1>
   <h2>Creat an account/Login</h2>
   </section>
-  <form action="https:https://formspree.io/f/mreabqwq" method="POST">
+  <form action="https://formspree.io/f/mreabqwq" method="POST">
     <section class="details">
       <h3>Details</h3>
       <label for="e-mail">Your Email address</label>
       <br>
-      <input id="e-mail" type="test" name="email" placeholder="Example001@email.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z] {2,}$"required>
+      <input id="e-mail" type="email" name="email" placeholder="Example001@email.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z] {2,}$"required>
       <br>
       <label for="name">Your Full Name</label>
       <br>
@@ -62,6 +62,7 @@
     <section class="submit">
       <input id="submit" type="submit" value="DONE">
     </section>
+    <input type="hidden" name="_next" value="">
   </form>
   <style> // Get the form button
 const doneButton = document.querySelector('button'); // or however you select your DONE button
